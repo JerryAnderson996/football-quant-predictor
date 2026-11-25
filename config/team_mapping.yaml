@@ -1,0 +1,130 @@
+# Canonical team names and aliases across football-data.co.uk, ClubElo, FBref, Understat
+# Structure:
+#   canonical_name:
+#     team_id: stable_slug
+#     aliases: [list of known names]
+
+teams:
+  # --- Serie A ---
+  AC Milan:
+    team_id: "ac_milan"
+    aliases: ["Milan", "AC Milan", "A.C. Milan", "Milano"]
+  Atalanta:
+    team_id: "atalanta"
+    aliases: ["Atalanta", "Atalanta BC", "Atalanta Bergamo"]
+  Benevento:
+    team_id: "benevento"
+    aliases: ["Benevento", "Benevento Calcio"]
+  Bologna:
+    team_id: "bologna"
+    aliases: ["Bologna", "Bologna FC", "Bologna FC 1909"]
+  Brescia:
+    team_id: "brescia"
+    aliases: ["Brescia", "Brescia Calcio"]
+  Cagliari:
+    team_id: "cagliari"
+    aliases: ["Cagliari", "Cagliari Calcio"]
+  Como:
+    team_id: "como"
+    aliases: ["Como", "Como 1907"]
+  Cremonese:
+    team_id: "cremonese"
+    aliases: ["Cremonese", "US Cremonese"]
+  Crotone:
+    team_id: "crotone"
+    aliases: ["Crotone", "FC Crotone"]
+  Empoli:
+    team_id: "empoli"
+    aliases: ["Empoli", "Empoli FC"]
+  Fiorentina:
+    team_id: "fiorentina"
+    aliases: ["Fiorentina", "ACF Fiorentina"]
+  Frosinone:
+    team_id: "frosinone"
+    aliases: ["Frosinone", "Frosinone Calcio"]
+  Genoa:
+    team_id: "genoa"
+    aliases: ["Genoa", "Genoa CFC"]
+  Hellas Verona:
+    team_id: "hellas_verona"
+    aliases: ["Verona", "Hellas Verona", "Hellas Verona FC"]
+  Inter:
+    team_id: "inter"
+    aliases: ["Inter", "Internazionale", "Inter Milan", "FC Internazionale Milano"]
+  Juventus:
+    team_id: "juventus"
+    aliases: ["Juventus", "Juventus FC", "Juve"]
+  Lazio:
+    team_id: "lazio"
+    aliases: ["Lazio", "SS Lazio", "S.S. Lazio"]
+  Lecce:
+    team_id: "lecce"
+    aliases: ["Lecce", "US Lecce"]
+  Monza:
+    team_id: "monza"
+    aliases: ["Monza", "AC Monza"]
+  Napoli:
+    team_id: "napoli"
+    aliases: ["Napoli", "SSC Napoli", "S.S.C. Napoli"]
+  Parma:
+    team_id: "parma"
+    aliases: ["Parma", "Parma Calcio", "Parma Calcio 1913"]
+  Pisa:
+    team_id: "pisa"
+    aliases: ["Pisa", "Pisa SC"]
+  Roma:
+    team_id: "roma"
+    aliases: ["Roma", "AS Roma", "A.S. Roma"]
+  Salernitana:
+    team_id: "salernitana"
+    aliases: ["Salernitana", "US Salernitana", "US Salernitana 1919"]
+  Sampdoria:
+    team_id: "sampdoria"
+    aliases: ["Sampdoria", "UC Sampdoria"]
+  Sassuolo:
+    team_id: "sassuolo"
+    aliases: ["Sassuolo", "US Sassuolo", "US Sassuolo Calcio"]
+  SPAL:
+    team_id: "spal"
+    aliases: ["Spal", "SPAL", "S.P.A.L."]
+  Spezia:
+    team_id: "spezia"
+    aliases: ["Spezia", "Spezia Calcio"]
+  Torino:
+    team_id: "torino"
+    aliases: ["Torino", "Torino FC"]
+  Udinese:
+    team_id: "udinese"
+    aliases: ["Udinese", "Udinese Calcio"]
+  Venezia:
+    team_id: "venezia"
+    aliases: ["Venezia", "Venezia FC"]
+
+  # --- Major UEFA Champions League clubs (extensibility) ---
+  Real Madrid:
+    team_id: "real_madrid"
+    aliases: ["Real Madrid", "Real Madrid CF"]
+  Barcelona:
+    team_id: "barcelona"
+    aliases: ["Barcelona", "FC Barcelona"]
+  Atletico Madrid:
+    team_id: "atletico_madrid"
+    aliases: ["Ath Madrid", "Atletico Madrid", "Atlético Madrid", "Club Atlético de Madrid"]
+  Bayern Munich:
+    team_id: "bayern_munich"
+    aliases: ["Bayern Munich", "FC Bayern Munich", "Bayern", "FC Bayern München"]
+  Borussia Dortmund:
+    team_id: "borussia_dortmund"
+    aliases: ["Dortmund", "Borussia Dortmund", "BVB"]
+  Manchester City:
+    team_id: "manchester_city"
+    aliases: ["Man City", "Manchester City", "Manchester City FC"]
+  Liverpool:
+    team_id: "liverpool"
+    aliases: ["Liverpool", "Liverpool FC"]
+  Arsenal:
+    team_id: "arsenal"
+    aliases: ["Arsenal", "Arsenal FC"]
+  Paris Saint-Germain:
+    team_id: "psg"
+    aliases: ["Paris SG", "PSG", "Paris Saint-Germain", "Paris Saint Germain"]

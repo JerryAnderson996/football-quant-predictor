@@ -1,0 +1,79 @@
+project:
+  name: "football-quant-predictor"
+  random_seed: 42
+  default_league: "I1"
+  supported_leagues:
+    I1: "Serie A"
+    CL: "UEFA Champions League"
+
+paths:
+  data_dir: "data"
+  bronze_dir: "data/bronze"
+  silver_dir: "data/silver"
+  gold_dir: "data/gold"
+  artifacts_dir: "artifacts"
+  duckdb_path: "data/silver/football.duckdb"
+  team_mapping_path: "config/team_mapping.yaml"
+
+ingestion:
+  football_data_base_url: "https://www.football-data.co.uk/mmz4281"
+  league_code: "I1"
+  # Last 6 completed Serie A seasons (2020/21 through 2025/26)
+  seasons:
+    - "2021"
+    - "2122"
+    - "2223"
+    - "2324"
+    - "2425"
+    - "2526"
+  request_timeout_seconds: 20.0
+  club_elo:
+    enabled: false
+    base_url: "http://api.clubelo.com"
+    cache_dir: "data/bronze/club_elo_cache"
+    timeout_seconds: 8.0
+
+features:
+  ema_spans: [5, 10]
+  elo_initial_rating: 1500.0
+  elo_k_factor: 20.0
+  elo_home_advantage: 65.0
+  default_rest_days: 7.0
+  max_rest_days: 30.0
+  min_history_matches: 3
+
+models:
+  dixon_coles:
+    xi: 0.0018
+    max_goals: 8
+    l2_reg: 0.0005
+    max_iter: 400
+  gbm:
+    calibration_method: "sigmoid"
+    n_estimators: 200
+    learning_rate: 0.03
+    num_leaves: 15
+    max_depth: 4
+    min_child_samples: 30
+    subsample: 0.8
+    colsample_bytree: 0.8
+    reg_alpha: 1.0
+    reg_lambda: 5.0
+    val_fraction: 0.20
+  ensemble:
+    val_fraction: 0.20
+
+betting:
+  devig_method: "power"
+  min_ev_threshold: 0.03
+  kelly_fraction: 0.25
+  max_stake_fraction: 0.03
+  initial_bankroll: 1000.0
+  min_odds: 1.05
+  max_odds: 15.0
+
+backtest:
+  n_test_seasons: 2
+  retrain_interval_days: 28
+  min_train_matches: 600
+  odds_source: "pinnacle_open"
